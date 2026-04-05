@@ -7,6 +7,7 @@ INGRESS_PATH=$(bashio::addon.ingress_entry)
 bashio::log.info "ESPHome URL: ${ESPHOME_URL}"
 bashio::log.info "Ingress path: ${INGRESS_PATH}"
 
+
 cat > /etc/nginx/servers/ingress.conf << NGINX
 server {
     listen 5000 default_server;
@@ -27,4 +28,6 @@ server {
 }
 NGINX
 
+bashio::log.info "Generated config:"
+cat /etc/nginx/servers/ingress.conf
 bashio::log.info "nginx config written."
