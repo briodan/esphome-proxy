@@ -2,7 +2,7 @@
 
 ESPHOME_URL=$(bashio::config 'esphome_url')
 ESPHOME_URL="${ESPHOME_URL%/}"
-INGRESS_PATH=$(bashio::addon 'ingress_path')
+INGRESS_PATH=$(bashio::addon.ingress_entry)
 
 bashio::log.info "ESPHome URL: ${ESPHOME_URL}"
 bashio::log.info "Ingress path: ${INGRESS_PATH}"
