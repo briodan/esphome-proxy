@@ -1,5 +1,5 @@
 name: ESPHome Proxy
-version: "1.0.0"
+version: "1.0.1"
 slug: esphome_proxy
 description: Proxy for an external ESPHome dashboard instance into the HA sidebar
 url: https://esphome.io
