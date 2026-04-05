@@ -1,4 +1,4 @@
-#!/command/with-contenv bashio
+#!/usr/bin/with-contenv bashio
 
 ESPHOME_URL=$(bashio::config 'esphome_url')
 ESPHOME_URL="${ESPHOME_URL%/}"
