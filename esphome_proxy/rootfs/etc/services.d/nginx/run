@@ -1,4 +1,0 @@
-#!/bin/sh
-echo "[$(date '+%H:%M:%S')] INFO: Starting NGINX..."
-/usr/sbin/nginx -c /etc/nginx/nginx.conf 2>&1
-echo "[$(date '+%H:%M:%S')] INFO: nginx exit code: $?"

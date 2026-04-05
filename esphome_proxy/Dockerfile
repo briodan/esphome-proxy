@@ -2,12 +2,11 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN apk add --no-cache nginx \
-    && mkdir -p /etc/nginx/servers
+    && mkdir -p /etc/nginx/servers \
+    && mkdir -p /run/nginx
 
 COPY rootfs /
 
-RUN chmod a+x /etc/cont-init.d/nginx.sh \
-    && chmod a+x /etc/services.d/nginx/run \
-    && chmod a+x /etc/services.d/nginx/finish
+RUN chmod a+x /etc/cont-init.d/nginx.sh
 
-CMD ["/init"]
+CMD ["nginx", "-c", "/etc/nginx/nginx.conf"]
