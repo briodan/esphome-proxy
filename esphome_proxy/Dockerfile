@@ -11,3 +11,5 @@ COPY rootfs /
 RUN chmod a+x /etc/s6-overlay/s6-rc.d/init-nginx/run \
     && chmod a+x /etc/s6-overlay/s6-rc.d/nginx/run \
     && chmod a+x /etc/s6-overlay/s6-rc.d/nginx/finish
+
+CMD ["/init"]
